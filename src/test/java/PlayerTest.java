@@ -92,7 +92,7 @@ public class PlayerTest {
     }
 
     static Stream<String> emailError() {
-        return Stream.of(null, "  ", "alex@gmail.com");
+        return Stream.of(null, "  ", "alex@gmailcom");
 
     }
 
