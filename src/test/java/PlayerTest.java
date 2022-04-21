@@ -60,9 +60,9 @@ public class PlayerTest {
 
     @Test
     public void playerCreateSuccess() {
-        Player blackPlayer = new Player("Lexa Petrov", "xabza@gmail.com", false, 2500, 39);
-        Assertions.assertEquals("Lexa Petrov", blackPlayer.getName());
-        Assertions.assertEquals("xabza@gmail.com", blackPlayer.getEmail());
+        Player blackPlayer = new Player("Alex Petrov", "alex@gmail.com", false, 2500, 39);
+        Assertions.assertEquals("Alex Petrov", blackPlayer.getName());
+        Assertions.assertEquals("alex@gmail.com", blackPlayer.getEmail());
         Assertions.assertFalse(blackPlayer.isWhite());
         Assertions.assertEquals(2500, blackPlayer.getRank());
         Assertions.assertEquals(39, blackPlayer.getAge());
@@ -72,7 +72,7 @@ public class PlayerTest {
     @MethodSource("nameError")
     public void playerCreateIncorrectNameTest(String name) {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            Player player = new Player(name, "xabza@gmail.com", false, 2500, 39);
+            Player player = new Player(name, "alex@gmailcom", false, 2500, 39);
         });
 
     }
@@ -86,13 +86,13 @@ public class PlayerTest {
     @MethodSource("emailError")
     public void playerCreateIncorrectEmailTest(String email) {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            Player player = new Player("Lexa Petrov", email, false, 2500, 39);
+            Player player = new Player("Alex Petrov", email, false, 2500, 39);
         });
 
     }
 
     static Stream<String> emailError() {
-        return Stream.of(null, "  ", "xabzagmailcom");
+        return Stream.of(null, "  ", "alex@gmail.com");
 
     }
 

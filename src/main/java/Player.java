@@ -7,13 +7,13 @@ public class Player {
 
     public Player(String name, String email, boolean white, int rank, int age) {
         if (name == null || name.isBlank() || name.isEmpty()) {
-            throw new IllegalArgumentException("имя не может быть пустым");
+            throw new IllegalArgumentException("name can't be empty");
         } else {
             this.name = name;
         }
 
         if (email == null || email.isEmpty() || email.isBlank()) {
-            throw new IllegalArgumentException("мыло не может быть пустым");
+            throw new IllegalArgumentException("email can't be empty");
         }
         if (!email.contains("@") || !email.contains(".")) {
             throw new IllegalArgumentException("the email address should contain '@' and '.'");
@@ -56,7 +56,7 @@ public class Player {
 
     public void setRank(int rank) {
         if (rank < 100 || rank > 3000) {
-            throw new IllegalArgumentException("нет такого ранга");
+            throw new IllegalArgumentException("such rang doesn't exists");
         }
         this.rank = rank;
     }
@@ -87,7 +87,7 @@ public class Player {
             throw new IllegalArgumentException("incorrect piece color");
         }
         piece.setSpot(spot);
-        System.out.println("Фигура " + piece.getName() + " перемещена " + spot);
+        System.out.println("Figure " + piece.getName() + " moved " + spot);
     }
 
 

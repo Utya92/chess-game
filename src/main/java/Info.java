@@ -8,10 +8,10 @@ public class Info {
     Scanner scanner = new Scanner(System.in);
 
     public void getInfoAllPlayers() throws InputMismatchException {
-        System.out.println("введите любое число от 1 до 10");
+        System.out.println("enter random number from 1 to 10");
 
         if (scanner.nextInt() > 10) {
-            System.out.println("диапазон не должен превышать от 1 до 10");
+            System.out.println("range must not exceed 1 to 10");
             scanner.close();
             return;
         }

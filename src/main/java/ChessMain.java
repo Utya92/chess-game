@@ -12,7 +12,7 @@ public class ChessMain {
         try {
             info.getInfoAllPlayers();
         } catch (InputMismatchException i) {
-            System.out.println("введенное значение не может быть строкой");
+            System.out.println("entered value can't be a string");
         }
 
 
@@ -21,7 +21,7 @@ public class ChessMain {
 
     public ArrayList<Player> createPlayers() {
         Player whitePlayer = new Player("Beth Harmon", "bethharmon@gmail.com", true, 2000, 20);
-        Player blackPlayer = new Player("Lexa Petrov", "xabza@gmail.com", false, 2500, 39);
+        Player blackPlayer = new Player("Julio Bernhardin", "julioplay@gmail.com", false, 2500, 39);
         ArrayList<Player> players = new ArrayList<>();
         players.add(whitePlayer);
         players.add(blackPlayer);
@@ -50,7 +50,7 @@ public class ChessMain {
             players.get(0).movePiece(hashMap.get("black_king"), new Spot("a", 8));
 
         } catch (IllegalArgumentException e) {
-            System.out.println("неправильный ход!");
+            System.out.println("illegal move");
         }
         players.get(1).movePiece(hashMap.get("black_knight"), new Spot("c", 8));
 

@@ -4,7 +4,7 @@ public class Spot {
 
     public Spot(String x, int y) {
         if (x.compareTo("h") > 0 || y > 8 || y <= 0) {
-            throw new IllegalArgumentException("координаты не могут быть одинаковыми");
+            throw new IllegalArgumentException("coordinates can't be the same");
         }
         this.x = x;
         this.y = y;
